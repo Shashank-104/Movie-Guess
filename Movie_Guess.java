@@ -1,12 +1,12 @@
 import java.util.*;
 class Movie_Guess
 {
-    String Movies[]={"THE/FLYING/JATT","RACE/2","3/IDIOTS","MS/DHONI/AN/UNTOLD/STORY","RAB/NE/BANA/DI/JODI","DEAR/ZINDAGI","DANGAL","RAEES","SULTAN","ACTION/JACKSON","A/WEDNESDAY","BHOOTNATH/RETURNS","SPECIAL/26","DABANGG/2","BAND/BAAJA/BAARAAT","BROTHERS","BEFIKRE","BAJIRAO/MASTANI","JAB/TAK/HAI/JAAN","HAPPY/NEW/YEAR","EK/VILLIAN","SHOR/IN/THE/CITY","ONCE/UPON/A/TIME/IN/MUMBAI","LUNCHBOX","SLUMDOG/MILLIONAIRE","GULABO/SITABO","SHUBH/MANGAL/ZYADA/SAAVDHAN"};
-    void main()
+    String Movies[]={"THE/FLYING/JATT","RACE/2","3/IDIOTS","MS/DHONI/AN/UNTOLD/STORY","RAB/NE/BANA/DI/JODI","DEAR/ZINDAGI","DANGAL","RAEES","SULTAN","ACTION/JACKSON","A/WEDNESDAY","BHOOTNATH/RETURNS","SPECIAL/26","DABANGG/2","BAND/BAAJA/BAARAAT","BROTHERS","BEFIKRE","BAJIRAO/MASTANI","JAB/TAK/HAI/JAAN","HAPPY/NEW/YEAR","EK/VILLIAN","SHOR/IN/THE/CITY","ONCE/UPON/A/TIME/IN/MUMBAI","THE/LUNCHBOX","SLUMDOG/MILLIONAIRE"};
+    void GuessMovie()
     { 
         Scanner obj=new Scanner(System.in);
-        int random=(int)(Math.random()*27+1); //generates a random number between 1 and 25
-        String a=Movies[random-1];
+        int random=(int)(Math.random()*25+1); //generates a random number between 1 and 25
+        String a=Movies[random];
         int l=a.length();
         String b="";
         String vowels="AEIOU";
@@ -68,9 +68,24 @@ class Movie_Guess
         }
         else 
         {
-            System.out.println("Congrats!You Won...");
+            System.out.println("Congrats!You Won :):):)");
             System.out.println("Movie Name: "+a);
         }
+        System.out.println("Press 1 to play again or 0 to exit");
+        int p=obj.nextInt();
+        if(p==1)
+   
+          GuessMovie();
+        else
+        {
+        System.out.println("Thank you for playing");
+        System.exit(0);
+        }
+    }
+    public static void main(String[] args)
+    {
+        Movie_Guess ob = new Movie_Guess();
+        ob.GuessMovie();
     }
 }
             
